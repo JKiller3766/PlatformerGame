@@ -15,9 +15,10 @@ $(Your Game Description)
 ### Controls
 
 Keyboard:
- - $(Game Control 01)
- - $(Game Control 02)
- - $(Game Control 03)
+ - WASD / Arrow keys - player movement
+ - SPACE - jump
+ - ENTER - start/restart game
+ - ESCAPE - to exit
 
 ### Screenshots
 
@@ -25,20 +26,9 @@ _TODO: Show your game to the world, animated GIFs recommended!._
 
 ### Developers
 
- - $(Developer 01) - $(Role/Tasks Developed)
- - $(Developer 02) - $(Role/Tasks Developed)
- - $(Developer 03) - $(Role/Tasks Developed)
+ - Adrià Gil Aroca - $(Role/Tasks Developed)
+ - Luca Nicolas Calveiro Treitl - $(Role/Tasks Developed)
+ - Didac March Repullés - $(Role/Tasks Developed)
+ - Rafael Maria Macias Marindatu - 
 
-### Links
 
- - YouTube Gameplay: $(YouTube Link)
- - itch.io Release: $(itch.io Game Page)
- - Steam Release: $(Steam Game Page)
-
-### License
-
-This game sources are licensed under MIT license. Check [LICENSE](LICENSE) for further details.
-
-$(Additional Licenses)
-
-*Copyright (c) $(Year) $(Developers Names)*
