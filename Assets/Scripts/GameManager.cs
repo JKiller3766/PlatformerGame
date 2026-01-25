@@ -1,10 +1,10 @@
 using UnityEngine;
-
+using TMPro;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public int totalCoins = 0;
-    public Text coinText;
+    public TMP_Text coinText;
 
     void Awake()
     {
@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
 
     public void AddCoins(int coinValue)
     {
-        totalCoins += amount;
+        totalCoins += coinValue;
         UpdateCoinUI();
     }
 
