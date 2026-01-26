@@ -9,6 +9,8 @@ public class PlayerJumper : MonoBehaviour
     public float DistanceToMaxHeight;
     public float SpeedHorizontal;
     public float PressTimeToMaxJump;
+    [SerializeField] public bool DoubleJumpUnlocked = false;
+    public bool SingleJump = false;
 
     public float WallSlideSpeed = 1;
     public ContactFilter2D filter;
@@ -39,12 +41,24 @@ public class PlayerJumper : MonoBehaviour
     {
         if (collisionDetection.IsGrounded)
         {
-            SetGravity();
-            var velocity = new Vector2(rigidbody.linearVelocity.x, GetJumpForce());
-            rigidbody.linearVelocity = velocity;
-            jumpStartedTime = Time.time;
+            Jump();
+            SingleJump = true;
+        } else {
+            if (DoubleJumpUnlocked && SingleJump)
+            {
+                Jump();
+                SingleJump = false;
+            }
         }
-        
+    }
+
+
+    public void Jump()
+    {
+        SetGravity();
+        var velocity = new Vector2(rigidbody.linearVelocity.x, GetJumpForce());
+        rigidbody.linearVelocity = velocity;
+        jumpStartedTime = Time.time;
     }
 
     // NOTE: InputSystem: "JumpFinished" action becomes "OnJumpFinished" method
