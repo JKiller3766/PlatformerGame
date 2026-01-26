@@ -31,15 +31,20 @@ public class PlayerJumper : MonoBehaviour
         if (IsPeakReached()) TweakGravity();
 
         if (IsWallSliding) SetWallSlide();
+
     }
 
     // NOTE: InputSystem: "JumpStarted" action becomes "OnJumpStarted" method
     public void OnJumpStarted()
     {
-        SetGravity();
-        var velocity = new Vector2(rigidbody.linearVelocity.x, GetJumpForce());
-        rigidbody.linearVelocity = velocity;
-        jumpStartedTime = Time.time;
+        if (collisionDetection.IsGrounded)
+        {
+            SetGravity();
+            var velocity = new Vector2(rigidbody.linearVelocity.x, GetJumpForce());
+            rigidbody.linearVelocity = velocity;
+            jumpStartedTime = Time.time;
+        }
+        
     }
 
     // NOTE: InputSystem: "JumpFinished" action becomes "OnJumpFinished" method

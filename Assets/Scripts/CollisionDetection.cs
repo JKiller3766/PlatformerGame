@@ -6,6 +6,10 @@ public class CollisionDetection : MonoBehaviour
     private LayerMask WhatIsGround;
     [SerializeField]
     private LayerMask WhatIsPlatform;
+    [SerializeField]
+    private LayerMask WhatIsRoof;
+    [SerializeField]
+    private LayerMask WhatIsWall;
 
     [SerializeField]
     private Transform GroundCheckPoint;
@@ -65,19 +69,19 @@ public class CollisionDetection : MonoBehaviour
         CheckGrounded();
         CheckPlatformed();
         CheckFront();
-        //CheckRoof();          // Enable check once a RoofCheckPoint has been set!
+        CheckRoof();          // Enable check once a RoofCheckPoint has been set!
     }
 
     private void CheckFront()
     {
-        var colliders = Physics2D.OverlapCircleAll(FrontCheckPoint.position, checkRadius, WhatIsGround);
+        var colliders = Physics2D.OverlapCircleAll(FrontCheckPoint.position, checkRadius, WhatIsWall);
 
         isTouchingFront = (colliders.Length > 0);
     }
 
     private void CheckRoof()
     {
-        var colliders = Physics2D.OverlapCircleAll(RoofCheckPoint.position, checkRadius, WhatIsGround);
+        var colliders = Physics2D.OverlapCircleAll(RoofCheckPoint.position, checkRadius, WhatIsRoof);
 
         isTouchingRoof = (colliders.Length > 0);
     }
