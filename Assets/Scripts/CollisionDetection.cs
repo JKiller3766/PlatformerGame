@@ -16,6 +16,8 @@ public class CollisionDetection : MonoBehaviour
     [SerializeField]
     private Transform FrontCheckPoint;
     [SerializeField]
+    private Transform BackCheckPoint;
+    [SerializeField]
     private Transform RoofCheckPoint;
 
     public Transform CurrentPlatform;
@@ -30,6 +32,10 @@ public class CollisionDetection : MonoBehaviour
     [SerializeField]
     private bool isTouchingFront;
     public bool IsTouchingFront { get { return isTouchingFront; } }
+
+    [SerializeField]
+    private bool isTouchingBack;
+    public bool IsTouchingBack { get { return isTouchingBack; } }
 
     [SerializeField]
     private bool isPlatformGround;
@@ -69,6 +75,7 @@ public class CollisionDetection : MonoBehaviour
         CheckGrounded();
         CheckPlatformed();
         CheckFront();
+        CheckBack();
         CheckRoof();          // Enable check once a RoofCheckPoint has been set!
     }
 
@@ -77,6 +84,13 @@ public class CollisionDetection : MonoBehaviour
         var colliders = Physics2D.OverlapCircleAll(FrontCheckPoint.position, checkRadius, WhatIsWall);
 
         isTouchingFront = (colliders.Length > 0);
+    }
+
+    private void CheckBack()
+    {
+        var colliders = Physics2D.OverlapCircleAll(BackCheckPoint.position, checkRadius, WhatIsWall);
+
+        isTouchingBack = (colliders.Length > 0);
     }
 
     private void CheckRoof()

@@ -20,7 +20,7 @@ public class PlayerJumper : MonoBehaviour
     private float lastVelocityY;
     private float jumpStartedTime;
 
-    bool IsWallSliding => collisionDetection.IsTouchingFront;
+    bool IsWallSliding => collisionDetection.IsTouchingFront || collisionDetection.IsTouchingBack;
 
     void Start()
     {
