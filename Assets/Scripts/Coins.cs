@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Coins : MonoBehaviour
@@ -11,7 +12,9 @@ public class Coins : MonoBehaviour
     }
 
     public CoinType coinType = CoinType.Bronce;
-    public int coinValue = 1;
+    public int coinValue;
+    public static Action<Coins> OnCoinCollected;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -40,13 +43,12 @@ public class Coins : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.CompareTag("Player"))
-        {
-            GameManager.instance.AddCoins(coinValue);
+        
+            OnCoinCollected?.Invoke(this);
             Destroy(gameObject);
-        }
+        
     }
 
     // Update is called once per frame
