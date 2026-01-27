@@ -15,7 +15,7 @@ public class Coins : MonoBehaviour
     public int coinValue;
     public static Action<Coins> OnCoinCollected;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    
     void Start()
     {
         AssignValuePerType();
@@ -48,12 +48,6 @@ public class Coins : MonoBehaviour
         
             OnCoinCollected?.Invoke(this);
             Destroy(gameObject);
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
         
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class PlayerJumper : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class PlayerJumper : MonoBehaviour
     public float DistanceToMaxHeight;
     public float SpeedHorizontal;
     public float PressTimeToMaxJump;
-    [SerializeField] public bool DoubleJumpUnlocked = false;
+    [SerializeField] public bool DoubleJumpEnabled = false;
     public bool SingleJump = false;
 
     public float WallSlideSpeed = 1;
@@ -39,12 +40,12 @@ public class PlayerJumper : MonoBehaviour
     // NOTE: InputSystem: "JumpStarted" action becomes "OnJumpStarted" method
     public void OnJumpStarted()
     {
-        if (collisionDetection.IsGrounded)
+        if (collisionDetection.IsGrounded || collisionDetection.IsTouchingFront || collisionDetection.IsTouchingBack)
         {
             Jump();
             SingleJump = true;
         } else {
-            if (DoubleJumpUnlocked && SingleJump)
+            if (DoubleJumpEnabled && SingleJump)
             {
                 Jump();
                 SingleJump = false;
@@ -118,4 +119,27 @@ public class PlayerJumper : MonoBehaviour
 
         return hit[0].distance;
     }
+
+    private void OnEnable()
+    {
+        JumpUpgrade.OnJumpUpgradePickUp += UpgradeJump;
+        DoubleJumpUpgrade.OnDoubleJumpUpgradePickUp += EnableDoubleJump;
+    }
+
+    private void OnDisable()
+    {
+        JumpUpgrade.OnJumpUpgradePickUp -= UpgradeJump;
+        DoubleJumpUpgrade.OnDoubleJumpUpgradePickUp -= EnableDoubleJump;
+    }
+
+    private void UpgradeJump()
+    {
+        JumpHeight *= 1.5f;
+    }
+
+    private void EnableDoubleJump()
+    {
+        DoubleJumpEnabled = true;
+    }
+
 }

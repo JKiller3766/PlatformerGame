@@ -19,7 +19,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         UpdateCoinUI();
@@ -42,13 +41,5 @@ public class GameManager : MonoBehaviour
     public int GetTotalCoins()
     {
         return totalCoins;
-    }
-
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
