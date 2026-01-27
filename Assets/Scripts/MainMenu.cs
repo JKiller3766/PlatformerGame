@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class MainMenu : MonoBehaviour
 {
@@ -9,38 +10,15 @@ public class MainMenu : MonoBehaviour
     
     public void Update()
     {
-
-        //Pressionar Enter
-        if (Input.GetKeyDown(KeyCode.Return) ) 
+        if(Keyboard.current.enterKey.wasPressedThisFrame)
         {
-            SceneManager.LoadSceneAsync(gameSceneName);
+            StartGame();
         }
-
-        //Pressionar Escape
-        if (Input.GetKeyDown(KeyCode.Escape)) 
-        {
-            Debug.Log("Saliendo del Juego...");
-            Application.Quit();
-        }
-
-        if (SceneManager.GetActiveScene().name == "Gameplay")
-        {
-             //Pressionar P 
-            if (Input.GetKeyDown(KeyCode.P)) 
-            {
-            isPaused = !isPaused;
-            
-               if (isPaused)
-               {
-                Time.timeScale = 1;
-                Debug.Log("Juego en marcha");
-               }
-               else 
-               {
-                Time.timeScale = 0;
-                Debug.Log("Juego Pausado");
-               }
-            }  
-        } 
     }
+
+    private void StartGame()
+    {
+    SceneManager.LoadScene(gameSceneName);
+    }
+
 }
