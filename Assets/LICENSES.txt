@@ -11,9 +11,6 @@
 	You may use these graphics in personal and commercial projects.
 	Credit (Kenney or www.kenney.nl) would be nice but is not mandatory.
 
-###############################################################################
-
-
 
 ###############################################################################
 
@@ -28,10 +25,6 @@
 	Credit (Kenney or www.kenney.nl) would be nice but is not mandatory.
 
 ###############################################################################
-
-
-###############################################################################
-
 
 	Puzzle Pack II
 	by Kenney Vleugels for Kenney (www.kenney.nl)
@@ -51,10 +44,6 @@
 
 
 ###############################################################################
-
-
-
-	
 
 	UI Pack (2.0)
 
@@ -77,8 +66,37 @@
 	Follow on Twitter for updates:
 	http://twitter.com/KenneyNL
 
+###############################################################################
 
+	Digital Audio
 
+	by  Kenney Vleugels (Kenney.nl)
+
+			------------------------------
+
+	License (Creative Commons Zero, CC0)
+	http://creativecommons.org/publicdomain/zero/1.0/
+
+	You may use these assets in personal and commercial projects.
+	Credit (Kenney or www.kenney.nl) would be nice but is not mandatory.
+
+			------------------------------
+
+	Donate:   http://support.kenney.nl
+	Request:  http://request.kenney.nl
+
+	Follow on Twitter for updates:
+	@KenneyNL
+
+###############################################################################
+
+Musical Cartoon Collection 6 by Audio_Secter via Pixabay.
+
+License: Pixabay License (Free for commercial and non-commercial use).
+
+Link: https://pixabay.com/sound-effects/musical-cartoon-collection-6-474021/
+
+###############################################################################
 
 https://opengameart.org/content/background-12
 https://creativecommons.org/publicdomain/zero/1.0/
