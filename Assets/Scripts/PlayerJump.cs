@@ -96,7 +96,7 @@ public class PlayerJumper : MonoBehaviour
 
     private void TweakGravity()
     {
-        rigidbody.gravityScale *= 1.2f;
+        rigidbody.gravityScale *= 1f;
     }
 
     private float GetJumpForce()
