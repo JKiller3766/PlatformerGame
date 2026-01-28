@@ -6,6 +6,7 @@ using UnityEngine;
 public class ScoreSystem : MonoBehaviour
 {
     public static int Score = 0;
+    public static bool Win = false;
 
     public static event Action<int> OnScoreUpdated;
 
