@@ -109,6 +109,7 @@ public class CollisionDetection : MonoBehaviour
         var colliders = Physics2D.OverlapCircleAll(GroundCheckPoint.position, checkRadius, WhatIsPlatform);
 
         isPlatformGround = (colliders.Length > 0);
+		
         if (isPlatformGround) CurrentPlatform = colliders[0].transform;
     }
 
@@ -117,6 +118,7 @@ public class CollisionDetection : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(GroundCheckPoint.position, Vector2.down, 100, WhatIsGround);
 
         distanceToGround = hit.distance;
+		
         groundAngle = Vector2.Angle(hit.normal,new Vector2(1,0));
     }
 }

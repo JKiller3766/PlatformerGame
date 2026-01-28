@@ -2,12 +2,8 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    [Header("---------- Audio Source -----------")]
-
     [SerializeField] AudioSource MusicSource;
     [SerializeField] AudioSource SFXSource;
-
-    [Header("---------- Audio Clip -----------")]
 
     public AudioClip gameplay;
     public AudioClip jump;
@@ -27,6 +23,7 @@ public class AudioManager : MonoBehaviour
     {
         PlayerJumper.OnJump -= PlaySound;
     }
+	
     private void PlaySound()
     {
         SFXSource.PlayOneShot(jump);

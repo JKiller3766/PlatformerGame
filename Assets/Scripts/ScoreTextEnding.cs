@@ -10,8 +10,6 @@ public class ScoreTextEnding : MonoBehaviour
 {
     public Text label;
 
-    
-
     private void OnEnable()
     {
         label.text = ("Score:" + ScoreSystem.Score);
