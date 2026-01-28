@@ -21,6 +21,8 @@ public class PlayerJumper : MonoBehaviour
     private float lastVelocityY;
     private float jumpStartedTime;
 
+    public float MaxFallSpeed = 12f;
+
     bool IsWallSliding => collisionDetection.IsTouchingFront || collisionDetection.IsTouchingBack;
 
     void Start()
@@ -32,7 +34,10 @@ public class PlayerJumper : MonoBehaviour
     void FixedUpdate()
     {
         if (IsPeakReached()) TweakGravity();
+
         if (IsWallSliding) SetWallSlide();
+
+        if (!collisionDetection.IsGrounded) LimitFallSpeed();
     }
 
     public void OnJumpStarted()
@@ -109,6 +114,14 @@ public class PlayerJumper : MonoBehaviour
         RaycastHit2D[] hit = new RaycastHit2D[3];
         Physics2D.Raycast(transform.position, Vector2.down, filter, hit, 10);
         return hit[0].distance;
+    }
+
+    private void LimitFallSpeed()
+    {
+        if (rigidbody.linearVelocity.y < -MaxFallSpeed)
+        {
+            rigidbody.linearVelocity = new Vector2(rigidbody.linearVelocity.x, -MaxFallSpeed);
+        }
     }
 
     private void OnEnable()
