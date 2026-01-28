@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
 
@@ -17,9 +16,7 @@ public class PlayerJumper : MonoBehaviour
     public float WallSlideSpeed = 1;
     public ContactFilter2D filter;
 
-    private AudioManager audioManager;
-
-            private Rigidbody2D rb;
+    private Rigidbody2D rigidbody;
     private CollisionDetection collisionDetection;
     private float lastVelocityY;
     private float jumpStartedTime;
@@ -28,15 +25,9 @@ public class PlayerJumper : MonoBehaviour
 
     bool IsWallSliding => collisionDetection.IsTouchingFront || collisionDetection.IsTouchingBack;
 
-
-    private void Awake()
-    {
-        audioManager = GameObject.FindGameObjectWithTag("Audio")?.GetComponent<AudioManager>();
-    }
-
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rigidbody = GetComponent<Rigidbody2D>();
         collisionDetection = GetComponent<CollisionDetection>();
     }
 
@@ -51,8 +42,6 @@ public class PlayerJumper : MonoBehaviour
 
     public void OnJumpStarted()
     {
-        audioManager.PlaySFX(audioManager.jump);
-
         if ((collisionDetection.IsGrounded) || (collisionDetection.IsTouchingFront) || (collisionDetection.IsTouchingBack))
         {
             Jump();
@@ -70,15 +59,15 @@ public class PlayerJumper : MonoBehaviour
     public void Jump()
     {
         SetGravity();
-        var velocity = new Vector2(rb.linearVelocity.x, GetJumpForce());
-        rb.linearVelocity = velocity;
+        var velocity = new Vector2(rigidbody.linearVelocity.x, GetJumpForce());
+        rigidbody.linearVelocity = velocity;
         jumpStartedTime = Time.time;
     }
 
     public void OnJumpFinished()
     {
         float fractionOfTimePressed = 1 / Mathf.Clamp01((Time.time - jumpStartedTime) / PressTimeToMaxJump);
-        rb.gravityScale *= fractionOfTimePressed;
+        rigidbody.gravityScale *= fractionOfTimePressed;
     }
 
     private void OnDrawGizmosSelected()
@@ -93,26 +82,26 @@ public class PlayerJumper : MonoBehaviour
 
     private bool IsPeakReached()
     {
-        bool reached = ((lastVelocityY * rb.linearVelocity.y) < 0);
-        lastVelocityY = rb.linearVelocity.y;
+        bool reached = ((lastVelocityY * rigidbody.linearVelocity.y) < 0);
+        lastVelocityY = rigidbody.linearVelocity.y;
         return reached;
     }
 
     private void SetWallSlide()
     {
-        rb.linearVelocity = new Vector2(rb.linearVelocity.x, 
-        Mathf.Max(rb.linearVelocity.y, -WallSlideSpeed));
+        rigidbody.linearVelocity = new Vector2(rigidbody.linearVelocity.x, 
+        Mathf.Max(rigidbody.linearVelocity.y, -WallSlideSpeed));
     }
 
     private void SetGravity()
     {
         var grav = 2 * JumpHeight * (SpeedHorizontal * SpeedHorizontal) / (DistanceToMaxHeight * DistanceToMaxHeight);
-        rb.gravityScale = grav / 9.81f;
+        rigidbody.gravityScale = grav / 9.81f;
     }
 
     private void TweakGravity()
     {
-        rb.gravityScale *= 1f;
+        rigidbody.gravityScale *= 1f;
     }
 
     private float GetJumpForce()
@@ -129,9 +118,9 @@ public class PlayerJumper : MonoBehaviour
 
     private void LimitFallSpeed()
     {
-        if (rb.linearVelocity.y < -MaxFallSpeed)
+        if (rigidbody.linearVelocity.y < -MaxFallSpeed)
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, -MaxFallSpeed);
+            rigidbody.linearVelocity = new Vector2(rigidbody.linearVelocity.x, -MaxFallSpeed);
         }
     }
 
