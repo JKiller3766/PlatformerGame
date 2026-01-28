@@ -32,19 +32,17 @@ public class PlayerJumper : MonoBehaviour
     void FixedUpdate()
     {
         if (IsPeakReached()) TweakGravity();
-
         if (IsWallSliding) SetWallSlide();
-
     }
 
-    // NOTE: InputSystem: "JumpStarted" action becomes "OnJumpStarted" method
     public void OnJumpStarted()
     {
-        if (collisionDetection.IsGrounded || collisionDetection.IsTouchingFront || collisionDetection.IsTouchingBack)
+        if ((collisionDetection.IsGrounded) || (collisionDetection.IsTouchingFront) || (collisionDetection.IsTouchingBack))
         {
             Jump();
             SingleJump = true;
-        } else {
+        } 
+        else {
             if (DoubleJumpEnabled && SingleJump)
             {
                 Jump();
@@ -52,7 +50,6 @@ public class PlayerJumper : MonoBehaviour
             }
         }
     }
-
 
     public void Jump()
     {
@@ -62,7 +59,6 @@ public class PlayerJumper : MonoBehaviour
         jumpStartedTime = Time.time;
     }
 
-    // NOTE: InputSystem: "JumpFinished" action becomes "OnJumpFinished" method
     public void OnJumpFinished()
     {
         float fractionOfTimePressed = 1 / Mathf.Clamp01((Time.time - jumpStartedTime) / PressTimeToMaxJump);
@@ -78,21 +74,18 @@ public class PlayerJumper : MonoBehaviour
         Gizmos.DrawLine(start, end);
         Gizmos.color = Color.white;
     }
-    
+
     private bool IsPeakReached()
     {
         bool reached = ((lastVelocityY * rigidbody.linearVelocity.y) < 0);
         lastVelocityY = rigidbody.linearVelocity.y;
-
         return reached;
     }
 
     private void SetWallSlide()
     {
-        // Modify player linear velocity on wall sliding
-        //rigidbody.gravityScale = 0.8f;
         rigidbody.linearVelocity = new Vector2(rigidbody.linearVelocity.x, 
-            Mathf.Max(rigidbody.linearVelocity.y, -WallSlideSpeed));
+        Mathf.Max(rigidbody.linearVelocity.y, -WallSlideSpeed));
     }
 
     private void SetGravity()
@@ -114,9 +107,7 @@ public class PlayerJumper : MonoBehaviour
     private float GetDistanceToGround()
     {
         RaycastHit2D[] hit = new RaycastHit2D[3];
-
         Physics2D.Raycast(transform.position, Vector2.down, filter, hit, 10);
-
         return hit[0].distance;
     }
 
@@ -141,5 +132,4 @@ public class PlayerJumper : MonoBehaviour
     {
         DoubleJumpEnabled = true;
     }
-
 }

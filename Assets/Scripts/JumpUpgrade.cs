@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class JumpUpgrade : MonoBehaviour
 {
-    public static Action OnJumpUpgradePickUp;
+    public static event Action OnJumpUpgradePickUp;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

@@ -25,7 +25,6 @@ public class Ending : MonoBehaviour
     {
         if (textEnding == null)
             textEnding = GetComponent<TMP_Text>();
-
     }
 
     private void Start()
@@ -46,7 +45,6 @@ public class Ending : MonoBehaviour
     {
         if (IsEnterPressed())
         {
-            // reset para nueva partida
             if (GameManager.instance != null)
                 GameManager.instance.totalCoins = 0;
 
@@ -64,7 +62,6 @@ public class Ending : MonoBehaviour
         }
     }
 
-    // Llamad a esto desde cualquier script al terminar el juego:
     public static void GoToEnding(EndingType type, string endingSceneName = "Ending")
     {
         s_type = type;

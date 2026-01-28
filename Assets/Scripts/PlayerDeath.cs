@@ -18,6 +18,7 @@ public class PlayerDeath : MonoBehaviour
         playerJumper = GetComponent<PlayerJumper>();
         rb = GetComponent<Rigidbody2D>();
     }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (isDead) return;

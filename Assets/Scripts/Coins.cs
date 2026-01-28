@@ -13,9 +13,8 @@ public class Coins : MonoBehaviour
 
     public CoinType coinType = CoinType.Bronce;
     public int coinValue;
-    public static Action<Coins> OnCoinCollected;
+    public static event Action<Coins> OnCoinCollected;
 
-    
     void Start()
     {
         AssignValuePerType();
@@ -26,28 +25,23 @@ public class Coins : MonoBehaviour
         switch(coinType)
         {
             case CoinType.Bronce:
-            coinValue = 1;
-            break;
-
+                coinValue = 1;
+                break;
             case CoinType.Silver:
-            coinValue = 3;
-            break;
-
+                coinValue = 3;
+                break;
             case CoinType.Gold:
-            coinValue = 5;
-            break;
-
+                coinValue = 5;
+                break;
             case CoinType.Platinum:
-            coinValue = 10;
-            break;
+                coinValue = 10;
+                break;
         }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        
-            OnCoinCollected?.Invoke(this);
-            Destroy(gameObject);
-        
+        OnCoinCollected?.Invoke(this);
+        Destroy(gameObject);
     }
 }

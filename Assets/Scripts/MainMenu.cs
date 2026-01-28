@@ -4,9 +4,7 @@ using UnityEngine.InputSystem;
 
 public class MainMenu : MonoBehaviour
 {
-
     [SerializeField] private string gameSceneName = "Gameplay";
-    private bool isPaused = false;
     
     public void Update()
     {
@@ -18,7 +16,6 @@ public class MainMenu : MonoBehaviour
 
     private void StartGame()
     {
-    SceneManager.LoadScene(gameSceneName);
+        SceneManager.LoadScene(gameSceneName);
     }
-
 }
