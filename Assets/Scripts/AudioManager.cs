@@ -8,7 +8,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip gameplay;
     public AudioClip jump;
 
-    private void Start()
+    private void Awake()
     {
         MusicSource.clip = gameplay;
         MusicSource.Play();
