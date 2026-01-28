@@ -45,9 +45,9 @@ public class Coins : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        
-            OnCoinCollected?.Invoke(this);
-            Destroy(gameObject);
+         if (!other.CompareTag("Player")) return;
+         OnCoinCollected?.Invoke(this);
+         Destroy(gameObject);
         
     }
 }
