@@ -19,21 +19,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void OnEnable()
-    {
-        Coins.OnCoinCollected += HandleCoinCollected;
-    }
-
-    private void OnDisable()
-    {
-        Coins.OnCoinCollected -= HandleCoinCollected;
-    }
-
-    private void HandleCoinCollected(Coins coin)
-    {
-        AddCoins(coin.coinValue);
-    }
-
     void Start()
     {
         UpdateCoinUI();
