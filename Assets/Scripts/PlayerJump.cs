@@ -25,6 +25,8 @@ public class PlayerJumper : MonoBehaviour
 
     bool IsWallSliding => collisionDetection.IsTouchingFront || collisionDetection.IsTouchingBack;
 
+    public static event Action OnJump;
+
     void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
@@ -46,12 +48,14 @@ public class PlayerJumper : MonoBehaviour
         {
             Jump();
             SingleJump = true;
+            OnJump?.Invoke();
         } 
         else {
             if (DoubleJumpEnabled && SingleJump)
             {
                 Jump();
                 SingleJump = false;
+                OnJump?.Invoke();
             }
         }
     }
