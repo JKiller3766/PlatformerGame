@@ -8,8 +8,8 @@ $(Your Game Description)
 
 ### Features
 
- - $(Game Feature 01)
- - $(Game Feature 02)
+ - Jump Upgrade, Double Jump and Wall Jump.
+ - Coins Pick-up and Score System.
  - $(Game Feature 03)
 
 ### Controls
@@ -26,9 +26,12 @@ _TODO: Show your game to the world, animated GIFs recommended!._
 
 ### Developers
 
- - Adrià Gil Aroca - $(Role/Tasks Developed)
- - Luca Nicolas Calveiro Treitl - $(Role/Tasks Developed)
- - Didac March Repullés - $(Role/Tasks Developed)
- - Rafael Maria Macias Marindatu - 
+ - JKiller3766 - Programmer
+ - DeafKangaroo - Programmer
+ - AdriaGil0922 - Programmer
 
+### License
 
+This game sources are licensed under MIT license. Check [LICENSE](LICENSE) for further details.
+
+*Copyright (c) 2026*
