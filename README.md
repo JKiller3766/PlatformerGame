@@ -1,10 +1,10 @@
-## Delivery 01 - $(Game Title)
+## Delivery 01 - Platformer Game
 
 ![$(Game Title)](Screenshots/screenshot01.png "$(Game Title)")
 
 ### Description
 
-$(Your Game Description)
+You are an alien searching for a mushroom while finding the most amount of coins.
 
 ### Features
 
