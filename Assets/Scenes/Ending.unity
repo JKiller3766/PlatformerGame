@@ -496,7 +496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ee980cba7703cc4b92ae207f0f5fcf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TextEnding
-  label: {fileID: 365381498}
+  Label: {fileID: 365381498}
 --- !u!114 &365381498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1178,7 +1178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03f96a97100f4854c9a6c880dd02b5dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScoreTextEnding
-  label: {fileID: 1812945220}
+  Label: {fileID: 1812945220}
 --- !u!114 &1812945220
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -23,7 +23,7 @@ public class PlayerJumper : MonoBehaviour
 
     public float MaxFallSpeed = 12f;
 
-    bool IsWallSliding => collisionDetection.IsTouchingFront || collisionDetection.IsTouchingBack;
+    public bool IsWallSliding => collisionDetection.IsTouchingFront || collisionDetection.IsTouchingBack;
 
     public static event Action OnJump;
 

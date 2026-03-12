@@ -22,7 +22,7 @@ public class ScoreSystem : MonoBehaviour
 
     private void UpdateScore(Coins coin)
     {
-        Score += coin.coinValue;
+        Score += coin.CoinValue;
         OnScoreUpdated?.Invoke(Score);
     }
 }

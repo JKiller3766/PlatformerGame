@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public class PlayerMove : MonoBehaviour
 {
     [SerializeField]
-    private float Speed = 5.0f;
+    private float speed = 5.0f;
 
     Rigidbody2D rigidbody;
     private float horizontalDir;
@@ -17,7 +17,7 @@ public class PlayerMove : MonoBehaviour
     void FixedUpdate()
     {
         Vector2 velocity = rigidbody.linearVelocity;
-        velocity.x = horizontalDir * Speed;
+        velocity.x = horizontalDir * speed;
         rigidbody.linearVelocity = velocity;
     }
 

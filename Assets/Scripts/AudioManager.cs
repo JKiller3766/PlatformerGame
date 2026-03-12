@@ -2,15 +2,15 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    [SerializeField] AudioSource MusicSource;
-    [SerializeField] AudioSource SFXSource;
+    [SerializeField] public AudioSource MusicSource;
+    [SerializeField] public AudioSource SFXSource;
 
-    public AudioClip gameplay;
-    public AudioClip jump;
+    public AudioClip Gameplay;
+    public AudioClip Jump;
 
     private void Awake()
     {
-        MusicSource.clip = gameplay;
+        MusicSource.clip = Gameplay;
         MusicSource.Play();
     }
 
@@ -26,6 +26,6 @@ public class AudioManager : MonoBehaviour
 	
     private void PlaySound()
     {
-        SFXSource.PlayOneShot(jump);
+        SFXSource.PlayOneShot(Jump);
     }
 }

@@ -3,7 +3,7 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public int totalCoins = 0;
+    public int TotalCoins = 0;
     public TMP_Text coinText;
 
     void Awake()
@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
 
     public void AddCoins(int coinValue)
     {
-        totalCoins += coinValue;
+        TotalCoins += coinValue;
         UpdateCoinUI();
     }
 
@@ -34,12 +34,12 @@ public class GameManager : MonoBehaviour
     {
         if (coinText != null)
         {
-            coinText.text = $"Monedas: {totalCoins}";
+            coinText.text = $"Monedas: {TotalCoins}";
         }
     }
 
     public int GetTotalCoins()
     {
-        return totalCoins;
+        return TotalCoins;
     }
 }

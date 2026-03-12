@@ -1,6 +1,6 @@
 ## Delivery 01 - Platformer Game
 
-<img width="1907" height="1062" alt="image" src="https://github.com/user-attachments/assets/d214635a-56ef-46d5-9e90-fe14612c4520" />
+![$(Game Title)](Screenshots/Title.png "$(Game Title)")
 
 ### Description
 
@@ -27,7 +27,7 @@ Keyboard:
 
 ### Screenshots
 
-<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/1220dbd9-3c54-4bba-a1ce-512f71ffa81a" />
+![$(Gameplay)](Screenshots/Gameplay.png "$(Gameplay)")
 
 ### License
 

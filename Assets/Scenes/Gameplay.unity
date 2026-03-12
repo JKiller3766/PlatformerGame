@@ -827,8 +827,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2423613431d5d4aaa5d543d48bf39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coins
-  coinType: 1
-  coinValue: 1
+  CoinsType: 1
+  CoinValue: 1
 --- !u!212 &21387907
 SpriteRenderer:
   serializedVersion: 2
@@ -1570,8 +1570,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2423613431d5d4aaa5d543d48bf39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coins
-  coinType: 1
-  coinValue: 1
+  CoinsType: 1
+  CoinValue: 1
 --- !u!212 &29849775
 SpriteRenderer:
   serializedVersion: 2
@@ -2581,8 +2581,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2423613431d5d4aaa5d543d48bf39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coins
-  coinType: 10
-  coinValue: 1
+  CoinsType: 10
+  CoinValue: 20
 --- !u!212 &91481748
 SpriteRenderer:
   serializedVersion: 2
@@ -2753,8 +2753,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2423613431d5d4aaa5d543d48bf39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coins
-  coinType: 5
-  coinValue: 1
+  CoinsType: 5
+  CoinValue: 10
 --- !u!212 &99779953
 SpriteRenderer:
   serializedVersion: 2
@@ -3273,8 +3273,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2423613431d5d4aaa5d543d48bf39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coins
-  coinType: 1
-  coinValue: 1
+  CoinsType: 1
+  CoinValue: 1
 --- !u!212 &145400696
 SpriteRenderer:
   serializedVersion: 2
@@ -3617,7 +3617,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9e841aef036f024f875047c8fd43cf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 7
+  speed: 5
 --- !u!114 &155923687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3695,22 +3695,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 128037ac809bbba45867466069c4137c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionDetection
-  WhatIsGround:
+  whatIsGround:
     serializedVersion: 2
     m_Bits: 256
-  WhatIsPlatform:
+  whatIsPlatform:
     serializedVersion: 2
     m_Bits: 2048
-  WhatIsRoof:
+  whatIsRoof:
     serializedVersion: 2
     m_Bits: 512
-  WhatIsWall:
+  whatIsWall:
     serializedVersion: 2
     m_Bits: 1024
-  GroundCheckPoint: {fileID: 1918508236}
-  FrontCheckPoint: {fileID: 739879385}
-  BackCheckPoint: {fileID: 2086081058}
-  RoofCheckPoint: {fileID: 254180828}
+  groundCheckPoint: {fileID: 1918508236}
+  frontCheckPoint: {fileID: 739879385}
+  backCheckPoint: {fileID: 2086081058}
+  roofCheckPoint: {fileID: 254180828}
   CurrentPlatform: {fileID: 0}
   isGrounded: 0
   isTouchingFront: 0
@@ -4291,8 +4291,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2423613431d5d4aaa5d543d48bf39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coins
-  coinType: 3
-  coinValue: 1
+  CoinsType: 3
+  CoinValue: 3
 --- !u!212 &168739070
 SpriteRenderer:
   serializedVersion: 2
@@ -5434,8 +5434,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2423613431d5d4aaa5d543d48bf39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coins
-  coinType: 1
-  coinValue: 1
+  CoinsType: 1
+  CoinValue: 1
 --- !u!212 &218764775
 SpriteRenderer:
   serializedVersion: 2
@@ -5915,8 +5915,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2423613431d5d4aaa5d543d48bf39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coins
-  coinType: 1
-  coinValue: 1
+  CoinsType: 1
+  CoinValue: 1
 --- !u!212 &265269006
 SpriteRenderer:
   serializedVersion: 2
@@ -6072,8 +6072,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2423613431d5d4aaa5d543d48bf39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coins
-  coinType: 3
-  coinValue: 1
+  CoinsType: 3
+  CoinValue: 3
 --- !u!212 &282641518
 SpriteRenderer:
   serializedVersion: 2
@@ -7127,8 +7127,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2423613431d5d4aaa5d543d48bf39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coins
-  coinType: 3
-  coinValue: 1
+  CoinsType: 3
+  CoinValue: 3
 --- !u!212 &324797514
 SpriteRenderer:
   serializedVersion: 2
@@ -7992,8 +7992,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2423613431d5d4aaa5d543d48bf39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coins
-  coinType: 5
-  coinValue: 1
+  CoinsType: 5
+  CoinValue: 10
 --- !u!212 &345377230
 SpriteRenderer:
   serializedVersion: 2
@@ -8164,8 +8164,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2423613431d5d4aaa5d543d48bf39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coins
-  coinType: 5
-  coinValue: 1
+  CoinsType: 5
+  CoinValue: 10
 --- !u!212 &347277940
 SpriteRenderer:
   serializedVersion: 2
@@ -8927,8 +8927,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2423613431d5d4aaa5d543d48bf39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coins
-  coinType: 3
-  coinValue: 1
+  CoinsType: 3
+  CoinValue: 3
 --- !u!212 &360935279
 SpriteRenderer:
   serializedVersion: 2
@@ -9513,8 +9513,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2423613431d5d4aaa5d543d48bf39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coins
-  coinType: 3
-  coinValue: 1
+  CoinsType: 3
+  CoinValue: 3
 --- !u!212 &401726403
 SpriteRenderer:
   serializedVersion: 2
@@ -9684,8 +9684,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2423613431d5d4aaa5d543d48bf39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coins
-  coinType: 1
-  coinValue: 1
+  CoinsType: 1
+  CoinValue: 1
 --- !u!212 &402104414
 SpriteRenderer:
   serializedVersion: 2
@@ -10298,8 +10298,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2423613431d5d4aaa5d543d48bf39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coins
-  coinType: 1
-  coinValue: 1
+  CoinsType: 1
+  CoinValue: 1
 --- !u!212 &421194580
 SpriteRenderer:
   serializedVersion: 2
@@ -11630,8 +11630,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2423613431d5d4aaa5d543d48bf39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coins
-  coinType: 1
-  coinValue: 1
+  CoinsType: 1
+  CoinValue: 1
 --- !u!212 &469686606
 SpriteRenderer:
   serializedVersion: 2
@@ -12242,8 +12242,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2423613431d5d4aaa5d543d48bf39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coins
-  coinType: 5
-  coinValue: 1
+  CoinsType: 5
+  CoinValue: 10
 --- !u!212 &503663779
 SpriteRenderer:
   serializedVersion: 2
@@ -15701,8 +15701,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2423613431d5d4aaa5d543d48bf39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coins
-  coinType: 3
-  coinValue: 1
+  CoinsType: 3
+  CoinValue: 3
 --- !u!212 &611075491
 SpriteRenderer:
   serializedVersion: 2
@@ -17396,8 +17396,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2423613431d5d4aaa5d543d48bf39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coins
-  coinType: 3
-  coinValue: 1
+  CoinsType: 3
+  CoinValue: 3
 --- !u!212 &657994657
 SpriteRenderer:
   serializedVersion: 2
@@ -18226,8 +18226,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2423613431d5d4aaa5d543d48bf39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coins
-  coinType: 3
-  coinValue: 1
+  CoinsType: 3
+  CoinValue: 3
 --- !u!212 &729736447
 SpriteRenderer:
   serializedVersion: 2
@@ -19852,8 +19852,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2423613431d5d4aaa5d543d48bf39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coins
-  coinType: 1
-  coinValue: 1
+  CoinsType: 1
+  CoinValue: 1
 --- !u!212 &804373645
 SpriteRenderer:
   serializedVersion: 2
@@ -20024,8 +20024,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2423613431d5d4aaa5d543d48bf39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coins
-  coinType: 1
-  coinValue: 1
+  CoinsType: 1
+  CoinValue: 1
 --- !u!212 &811254157
 SpriteRenderer:
   serializedVersion: 2
@@ -20343,7 +20343,7 @@ Transform:
   m_GameObject: {fileID: 832945218}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.7899101, y: -6.379999, z: 0}
+  m_LocalPosition: {x: 2.357042, y: -6.26, z: 0}
   m_LocalScale: {x: 1.4861, y: 1.4861, z: 1.4861}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21474,8 +21474,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   MusicSource: {fileID: 1920886156}
   SFXSource: {fileID: 930332739}
-  gameplay: {fileID: 8300000, guid: a63c5962fad3134418c71134d9b1e98f, type: 3}
-  jump: {fileID: 8300000, guid: 359df3aa931d46d458bc97d523ae250a, type: 3}
+  Gameplay: {fileID: 0}
+  Jump: {fileID: 0}
 --- !u!1 &883339849
 GameObject:
   m_ObjectHideFlags: 0
@@ -21620,8 +21620,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2423613431d5d4aaa5d543d48bf39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coins
-  coinType: 1
-  coinValue: 1
+  CoinsType: 1
+  CoinValue: 1
 --- !u!212 &884287411
 SpriteRenderer:
   serializedVersion: 2
@@ -22812,7 +22812,7 @@ Transform:
   m_GameObject: {fileID: 934427030}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16.970001, y: 25.6, z: 0}
+  m_LocalPosition: {x: 19.61, y: 25.72, z: 0}
   m_LocalScale: {x: 0.546718, y: 0.52271956, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22893,8 +22893,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2423613431d5d4aaa5d543d48bf39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coins
-  coinType: 1
-  coinValue: 1
+  CoinsType: 1
+  CoinValue: 1
 --- !u!212 &934427035
 SpriteRenderer:
   serializedVersion: 2
@@ -23343,8 +23343,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2423613431d5d4aaa5d543d48bf39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coins
-  coinType: 1
-  coinValue: 1
+  CoinsType: 1
+  CoinValue: 1
 --- !u!212 &951711710
 SpriteRenderer:
   serializedVersion: 2
@@ -23931,8 +23931,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2423613431d5d4aaa5d543d48bf39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coins
-  coinType: 3
-  coinValue: 1
+  CoinsType: 3
+  CoinValue: 3
 --- !u!212 &963239841
 SpriteRenderer:
   serializedVersion: 2
@@ -24102,8 +24102,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2423613431d5d4aaa5d543d48bf39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coins
-  coinType: 10
-  coinValue: 1
+  CoinsType: 10
+  CoinValue: 20
 --- !u!212 &969042860
 SpriteRenderer:
   serializedVersion: 2
@@ -24691,8 +24691,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2423613431d5d4aaa5d543d48bf39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coins
-  coinType: 3
-  coinValue: 1
+  CoinsType: 3
+  CoinValue: 3
 --- !u!212 &1002592008
 SpriteRenderer:
   serializedVersion: 2
@@ -25833,8 +25833,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2423613431d5d4aaa5d543d48bf39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coins
-  coinType: 1
-  coinValue: 1
+  CoinsType: 1
+  CoinValue: 1
 --- !u!212 &1043071261
 SpriteRenderer:
   serializedVersion: 2
@@ -29062,8 +29062,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2423613431d5d4aaa5d543d48bf39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coins
-  coinType: 1
-  coinValue: 1
+  CoinsType: 1
+  CoinValue: 1
 --- !u!212 &1194884389
 SpriteRenderer:
   serializedVersion: 2
@@ -30659,8 +30659,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2423613431d5d4aaa5d543d48bf39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coins
-  coinType: 3
-  coinValue: 1
+  CoinsType: 3
+  CoinValue: 3
 --- !u!212 &1275982711
 SpriteRenderer:
   serializedVersion: 2
@@ -34032,8 +34032,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2423613431d5d4aaa5d543d48bf39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coins
-  coinType: 1
-  coinValue: 1
+  CoinsType: 1
+  CoinValue: 1
 --- !u!212 &1433407552
 SpriteRenderer:
   serializedVersion: 2
@@ -34517,8 +34517,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2423613431d5d4aaa5d543d48bf39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coins
-  coinType: 3
-  coinValue: 1
+  CoinsType: 3
+  CoinValue: 3
 --- !u!212 &1443609723
 SpriteRenderer:
   serializedVersion: 2
@@ -35172,8 +35172,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2423613431d5d4aaa5d543d48bf39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coins
-  coinType: 3
-  coinValue: 1
+  CoinsType: 3
+  CoinValue: 3
 --- !u!212 &1475930785
 SpriteRenderer:
   serializedVersion: 2
@@ -36131,7 +36131,7 @@ Transform:
   m_GameObject: {fileID: 1516996355}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 19.630001, y: 25.6, z: 0}
+  m_LocalPosition: {x: 22.27, y: 25.72, z: 0}
   m_LocalScale: {x: 0.546718, y: 0.52271956, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -36212,8 +36212,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2423613431d5d4aaa5d543d48bf39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coins
-  coinType: 1
-  coinValue: 1
+  CoinsType: 1
+  CoinValue: 1
 --- !u!212 &1516996360
 SpriteRenderer:
   serializedVersion: 2
@@ -36940,8 +36940,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2423613431d5d4aaa5d543d48bf39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coins
-  coinType: 1
-  coinValue: 1
+  CoinsType: 1
+  CoinValue: 1
 --- !u!212 &1538595431
 SpriteRenderer:
   serializedVersion: 2
@@ -37286,8 +37286,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2423613431d5d4aaa5d543d48bf39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coins
-  coinType: 3
-  coinValue: 1
+  CoinsType: 3
+  CoinValue: 3
 --- !u!212 &1552824945
 SpriteRenderer:
   serializedVersion: 2
@@ -37769,8 +37769,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2423613431d5d4aaa5d543d48bf39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coins
-  coinType: 5
-  coinValue: 1
+  CoinsType: 5
+  CoinValue: 10
 --- !u!212 &1573246024
 SpriteRenderer:
   serializedVersion: 2
@@ -38277,7 +38277,7 @@ Transform:
   m_GameObject: {fileID: 1598193652}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.1, y: 25.6, z: 0}
+  m_LocalPosition: {x: 16.74, y: 25.72, z: 0}
   m_LocalScale: {x: 0.546718, y: 0.52271956, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -38358,8 +38358,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2423613431d5d4aaa5d543d48bf39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coins
-  coinType: 1
-  coinValue: 1
+  CoinsType: 1
+  CoinValue: 1
 --- !u!212 &1598193657
 SpriteRenderer:
   serializedVersion: 2
@@ -39210,8 +39210,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2423613431d5d4aaa5d543d48bf39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coins
-  coinType: 10
-  coinValue: 1
+  CoinsType: 10
+  CoinValue: 20
 --- !u!212 &1631360517
 SpriteRenderer:
   serializedVersion: 2
@@ -40960,8 +40960,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2423613431d5d4aaa5d543d48bf39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coins
-  coinType: 1
-  coinValue: 1
+  CoinsType: 1
+  CoinValue: 1
 --- !u!212 &1710221730
 SpriteRenderer:
   serializedVersion: 2
@@ -42143,8 +42143,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2423613431d5d4aaa5d543d48bf39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coins
-  coinType: 5
-  coinValue: 1
+  CoinsType: 5
+  CoinValue: 10
 --- !u!212 &1764806830
 SpriteRenderer:
   serializedVersion: 2
@@ -42315,8 +42315,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2423613431d5d4aaa5d543d48bf39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coins
-  coinType: 5
-  coinValue: 1
+  CoinsType: 5
+  CoinValue: 10
 --- !u!212 &1769153674
 SpriteRenderer:
   serializedVersion: 2
@@ -42765,8 +42765,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2423613431d5d4aaa5d543d48bf39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coins
-  coinType: 10
-  coinValue: 1
+  CoinsType: 10
+  CoinValue: 20
 --- !u!212 &1778994727
 SpriteRenderer:
   serializedVersion: 2
@@ -44152,8 +44152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2423613431d5d4aaa5d543d48bf39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coins
-  coinType: 3
-  coinValue: 1
+  CoinsType: 3
+  CoinValue: 3
 --- !u!212 &1836584067
 SpriteRenderer:
   serializedVersion: 2
@@ -46805,8 +46805,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2423613431d5d4aaa5d543d48bf39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coins
-  coinType: 3
-  coinValue: 1
+  CoinsType: 3
+  CoinValue: 3
 --- !u!212 &1959593335
 SpriteRenderer:
   serializedVersion: 2
@@ -47115,8 +47115,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2423613431d5d4aaa5d543d48bf39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coins
-  coinType: 5
-  coinValue: 1
+  CoinsType: 5
+  CoinValue: 10
 --- !u!212 &1968557664
 SpriteRenderer:
   serializedVersion: 2
@@ -47656,7 +47656,7 @@ Transform:
   m_GameObject: {fileID: 1979042820}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.77, y: -6.38, z: 0}
+  m_LocalPosition: {x: 1.337132, y: -6.260001, z: 0}
   m_LocalScale: {x: 1.4861, y: 1.4861, z: 1.4861}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -48746,8 +48746,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2423613431d5d4aaa5d543d48bf39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coins
-  coinType: 5
-  coinValue: 1
+  CoinsType: 5
+  CoinValue: 10
 --- !u!212 &2033799921
 SpriteRenderer:
   serializedVersion: 2
@@ -49335,8 +49335,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2423613431d5d4aaa5d543d48bf39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coins
-  coinType: 1
-  coinValue: 1
+  CoinsType: 1
+  CoinValue: 1
 --- !u!212 &2040174557
 SpriteRenderer:
   serializedVersion: 2
@@ -51339,8 +51339,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2423613431d5d4aaa5d543d48bf39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coins
-  coinType: 1
-  coinValue: 1
+  CoinsType: 1
+  CoinValue: 1
 --- !u!212 &2135905458
 SpriteRenderer:
   serializedVersion: 2
@@ -51511,8 +51511,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2423613431d5d4aaa5d543d48bf39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coins
-  coinType: 3
-  coinValue: 1
+  CoinsType: 3
+  CoinValue: 3
 --- !u!212 &2144900096
 SpriteRenderer:
   serializedVersion: 2

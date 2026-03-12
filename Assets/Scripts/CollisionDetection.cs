@@ -3,22 +3,22 @@
 public class CollisionDetection : MonoBehaviour
 {
     [SerializeField]
-    private LayerMask WhatIsGround;
+    private LayerMask whatIsGround;
     [SerializeField]
-    private LayerMask WhatIsPlatform;
+    private LayerMask whatIsPlatform;
     [SerializeField]
-    private LayerMask WhatIsRoof;
+    private LayerMask whatIsRoof;
     [SerializeField]
-    private LayerMask WhatIsWall;
+    private LayerMask whatIsWall;
 
     [SerializeField]
-    private Transform GroundCheckPoint;
+    private Transform groundCheckPoint;
     [SerializeField]
-    private Transform FrontCheckPoint;
+    private Transform frontCheckPoint;
     [SerializeField]
-    private Transform BackCheckPoint;
+    private Transform backCheckPoint;
     [SerializeField]
-    private Transform RoofCheckPoint;
+    private Transform roofCheckPoint;
 
     public Transform CurrentPlatform;
 
@@ -56,8 +56,8 @@ public class CollisionDetection : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(GroundCheckPoint.position, checkRadius);
-        Gizmos.DrawWireSphere(FrontCheckPoint.position, checkRadius);
+        Gizmos.DrawWireSphere(groundCheckPoint.position, checkRadius);
+        Gizmos.DrawWireSphere(frontCheckPoint.position, checkRadius);
         Gizmos.color = Color.white;
     }
 
@@ -78,35 +78,35 @@ public class CollisionDetection : MonoBehaviour
 
     private void CheckFront()
     {
-        var colliders = Physics2D.OverlapCircleAll(FrontCheckPoint.position, checkRadius, WhatIsWall);
+        var colliders = Physics2D.OverlapCircleAll(frontCheckPoint.position, checkRadius, whatIsWall);
 
         isTouchingFront = (colliders.Length > 0);
     }
 
     private void CheckBack()
     {
-        var colliders = Physics2D.OverlapCircleAll(BackCheckPoint.position, checkRadius, WhatIsWall);
+        var colliders = Physics2D.OverlapCircleAll(backCheckPoint.position, checkRadius, whatIsWall);
 
         isTouchingBack = (colliders.Length > 0);
     }
 
     private void CheckRoof()
     {
-        var colliders = Physics2D.OverlapCircleAll(RoofCheckPoint.position, checkRadius, WhatIsRoof);
+        var colliders = Physics2D.OverlapCircleAll(roofCheckPoint.position, checkRadius, whatIsRoof);
 
         isTouchingRoof = (colliders.Length > 0);
     }
 
     private void CheckGrounded()
     {
-        var colliders = Physics2D.OverlapCircleAll(GroundCheckPoint.position, checkRadius, WhatIsGround);
+        var colliders = Physics2D.OverlapCircleAll(groundCheckPoint.position, checkRadius, whatIsGround);
 
         isGrounded =  (colliders.Length > 0);
     }
 
     private void CheckPlatformed()
     {
-        var colliders = Physics2D.OverlapCircleAll(GroundCheckPoint.position, checkRadius, WhatIsPlatform);
+        var colliders = Physics2D.OverlapCircleAll(groundCheckPoint.position, checkRadius, whatIsPlatform);
 
         isPlatformGround = (colliders.Length > 0);
 		
@@ -115,7 +115,7 @@ public class CollisionDetection : MonoBehaviour
 
     private void CheckDistanceToGround()
     {
-        RaycastHit2D hit = Physics2D.Raycast(GroundCheckPoint.position, Vector2.down, 100, WhatIsGround);
+        RaycastHit2D hit = Physics2D.Raycast(groundCheckPoint.position, Vector2.down, 100, whatIsGround);
 
         distanceToGround = hit.distance;
 		

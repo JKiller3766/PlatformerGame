@@ -8,10 +8,10 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Text))]
 public class ScoreTextEnding : MonoBehaviour
 {
-    public Text label;
+    public Text Label;
 
     private void OnEnable()
     {
-        label.text = ("Score:" + ScoreSystem.Score);
+        Label.text = ("Score:" + ScoreSystem.Score);
     }
 }

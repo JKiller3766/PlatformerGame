@@ -11,8 +11,8 @@ public class Coins : MonoBehaviour
         Platinum = 10  
     }
 
-    public CoinType coinType = CoinType.Bronce;
-    public int coinValue;
+    public CoinType CoinsType = CoinType.Bronce;
+    public int CoinValue;
     public static event Action<Coins> OnCoinCollected;
 
     void Start()
@@ -22,19 +22,19 @@ public class Coins : MonoBehaviour
 
     void AssignValuePerType()
     {
-        switch(coinType)
+        switch(CoinsType)
         {
             case CoinType.Bronce:
-                coinValue = 1;
+                CoinValue = 1;
                 break;
             case CoinType.Silver:
-                coinValue = 3;
+                CoinValue = 3;
                 break;
             case CoinType.Gold:
-                coinValue = 5;
+                CoinValue = 5;
                 break;
             case CoinType.Platinum:
-                coinValue = 10;
+                CoinValue = 10;
                 break;
         }
     }
